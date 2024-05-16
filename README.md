@@ -8,9 +8,7 @@ Retrieval-Augmented Generation (RAG): Enhances response accuracy by retrieving r
 Chroma DB: Efficiently stores and retrieves vectorized data to support the RAG mechanism.
 
 
-How It Works
-User Interaction: The user interacts with the chatbot through the Streamlit web interface.
-Query Processing: The user's query is processed using LangChain to determine the appropriate NLP components.
-Information Retrieval: RAG mechanism queries Chroma DB to retrieve relevant information based on the user's input.
-Response Generation: OpenAI's language model generates a response using the retrieved information for enhanced accuracy and relevance.
-Response Display: The generated response is displayed on the Streamlit interface for the user.
+Brief explanation of how RAG works
+
+A RAG bot is short for Retrieval-Augmented Generation. This means that we are going to "augment" the knowledge of our LLM with new information that we are going to pass in our prompt. We first vectorize all the text that we want to use as "augmented knowledge" and then look through the vectorized text to find the most similar text to our prompt. We then pass this text to our LLM as a prefix.
+![alt text](https://github.com/alejandro-ao/chat-with-websites/blob/master/docs/HTML-rag-diagram.jpg)
